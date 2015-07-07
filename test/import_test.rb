@@ -385,7 +385,7 @@ describe "#import" do
         ]
         Book.import books
         assert_equal 2, Book.count
-        assert_equal 1, Book.first.read_attribute('status')
+        assert_equal 0, Book.first.read_attribute('status')
         assert_equal 1, Book.last.read_attribute('status')
       end
     end
